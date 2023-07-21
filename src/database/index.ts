@@ -1,6 +1,7 @@
 import Sequelize from 'sequelize';
 import { NODE_ENV, DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_DATABASE } from '@config';
 import UserModel from '@models/users.model';
+import TodoModel from '@models/todos.model'
 import { logger } from '@utils/logger';
 
 const sequelize = new Sequelize.Sequelize('todolist', 'root', '0414', {
@@ -29,6 +30,7 @@ sequelize.authenticate();
 
 export const DB = {
   Users: UserModel(sequelize),
+  TodoLists : TodoModel(sequelize),
   sequelize, // connection instance (RAW queries)
   Sequelize, // library
 };
