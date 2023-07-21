@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/able/Documents/GitHub/Sequelize template/src/logs/error/.8560bf790a3f572e69e2a1b6b817b4eec0682ebe-audit.json",
+    "files": [
+        {
+            "date": 1689919623867,
+            "name": "/Users/able/Documents/GitHub/Sequelize template/src/logs/error/2023-07-21.log",
+            "hash": "dc21215b3f6fc9ead3d97dc39c409bfe5494efa430d6d9d65dd4c29f48a1784b"
+        }
+    ],
+    "hashType": "sha256"
+}

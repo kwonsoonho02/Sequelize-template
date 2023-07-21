@@ -1,0 +1,7 @@
+2023-07-21 15:09:01 info: =================================
+2023-07-21 15:09:01 info: ======= ENV: development =======
+2023-07-21 15:09:01 info: 🚀 App listening on the port 3000
+2023-07-21 15:09:01 info: =================================
+2023-07-21 15:09:01 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-21 15:09:01 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-21 15:09:01 info: 1ms Executed (default): SHOW INDEX FROM `users`
