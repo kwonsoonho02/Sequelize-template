@@ -4,6 +4,7 @@ import { DB } from '@database';
 import { CreateUserDto } from '@dtos/users.dto';
 import { HttpException } from '@/exceptions/httpException';
 import { Todo } from '@/interfaces/todo.interface';
+import { promises } from 'dns';
 
 
 @Service()
@@ -13,5 +14,7 @@ export class TodoService {
 
         return allTodoList;
     }
- 
+    public async createTodo(title, content) : Promise<Todo>{
+        const findTodo = 
+    }
 }

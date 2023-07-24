@@ -8,11 +8,14 @@ import hpp from 'hpp';
 import morgan from 'morgan';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from '@config';
+import { NODE_ENV, LOG_FORMAT, ORIGIN, CREDENTIALS } from '@config';
 import { DB } from '@database';
 import { Routes } from '@interfaces/routes.interface';
 import { ErrorMiddleware } from '@middlewares/error.middleware';
 import { logger, stream } from '@utils/logger';
+import dotenv from "dotenv"
+
+dotenv.config();
 
 export class App {
   public app: express.Application;
@@ -22,7 +25,7 @@ export class App {
   constructor(routes: Routes[]) {
     this.app = express();
     this.env = NODE_ENV || 'development';
-    this.port = PORT || 3000;
+    this.port = process.env.PORT;
 
     this.connectToDatabase();
     this.initializeMiddlewares();

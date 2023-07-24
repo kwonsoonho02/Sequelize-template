@@ -8,7 +8,7 @@ import { logger } from '@utils/logger';
 const sequelize = new Sequelize.Sequelize('todolist', 'root', '0414', {
   dialect: 'mysql',
   host: DB_HOST,
-  port: 3306,
+  port: DB_PORT,
   timezone: '+09:00',
   define: {
     charset: 'utf8mb4',
