@@ -4,10 +4,11 @@ import UserModel from '@models/users.model';
 import TodoModel from '@models/todos.model'
 import { logger } from '@utils/logger';
 
+
 const sequelize = new Sequelize.Sequelize('todolist', 'root', '0414', {
   dialect: 'mysql',
   host: DB_HOST,
-  port: DB_PORT,
+  port: 3306,
   timezone: '+09:00',
   define: {
     charset: 'utf8mb4',
@@ -25,12 +26,17 @@ const sequelize = new Sequelize.Sequelize('todolist', 'root', '0414', {
   },
   benchmark: true,
 });
-
 sequelize.authenticate();
 
+const Users = UserModel(sequelize);
+const TodoLists = TodoModel(sequelize);
+
+Users.hasMany(TodoLists, {foreignKey : 'userId'})
+TodoLists.belongsTo(Users, {foreignKey : 'userId'})
+
 export const DB = {
-  Users: UserModel(sequelize),
-  TodoLists : TodoModel(sequelize),
+  Users,
+  TodoLists,
   sequelize, // connection instance (RAW queries)
   Sequelize, // library
 };

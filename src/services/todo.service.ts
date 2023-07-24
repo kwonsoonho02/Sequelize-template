@@ -7,8 +7,11 @@ import { Todo } from '@/interfaces/todo.interface';
 
 
 @Service()
-export class TodoListService {
-    public async findeAllTodoList(): Promise<Todo[]> {
+export class TodoService {
+    public async findAllTodoList(): Promise<Todo[]> {
         const allTodoList: Todo[] = await DB.TodoLists.findAll();
+
+        return allTodoList;
     }
+ 
 }
