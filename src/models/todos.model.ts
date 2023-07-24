@@ -1,7 +1,7 @@
 import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
 import { Todo } from '@/interfaces/todo.interface';
 import { type } from 'os';
-
+import UserModel from '@models/users.model';
 export type TodoCreationAttributes = Optional<Todo, 'id' | 'title' | 'content' | 'userId'>
 
 export class TodoModel extends Model<Todo, TodoCreationAttributes>{
@@ -34,7 +34,7 @@ export default function (sequelize: Sequelize): typeof TodoModel {
                 type : DataTypes.INTEGER,
                 allowNull : false,
                 references : {
-                    model : 'UserModel',
+                    model : 'users',
                     key : "id"
                 }
             },

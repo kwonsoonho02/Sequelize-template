@@ -16,7 +16,7 @@ export class TodoListController {
 
     public createTodo = async (req : Request, res : Response, next : NextFunction) => {
         try{
-            const {title, content} = req.body;
+            const {userId, title, content} = req.body;
             const createTodoData = await this.todo.createTodo(title, content);
 
             res.status(200).json({data : createTodoData, msg : "성공"});

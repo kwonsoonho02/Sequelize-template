@@ -14,7 +14,13 @@ export class TodoService {
 
         return allTodoList;
     }
-    public async createTodo(title, content) : Promise<Todo>{
-        const findTodo = 
+    public async createTodo(userId, title, content) : Promise<Todo[]>{
+        const findTodo = await DB.TodoLists.findOne({
+            where : {
+                userId
+            }
+        })
+
+        const createTodoData = await DB.TodoLists.create({title, content})
     }
 }

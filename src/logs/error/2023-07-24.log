@@ -1,0 +1,16 @@
+2023-07-24 16:45:40 error: uncaughtException: Can't create table `todolist`.`todos` (errno: 150 "Foreign key constraint is incorrectly formed")
+Error
+    at Query.run (/Users/able/Documents/GitHub/Sequelize template/node_modules/sequelize/src/dialects/mysql/query.js:46:25)
+    at /Users/able/Documents/GitHub/Sequelize template/node_modules/sequelize/src/sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.createTable (/Users/able/Documents/GitHub/Sequelize template/node_modules/sequelize/src/dialects/abstract/query-interface.js:229:12)
+    at async Function.sync (/Users/able/Documents/GitHub/Sequelize template/node_modules/sequelize/src/model.js:1353:7)
+    at async Sequelize.sync (/Users/able/Documents/GitHub/Sequelize template/node_modules/sequelize/src/sequelize.js:825:9)
+2023-07-24 16:47:49 error: uncaughtException: Can't create table `todolist`.`todos` (errno: 150 "Foreign key constraint is incorrectly formed")
+Error
+    at Query.run (/Users/able/Documents/GitHub/Sequelize template/node_modules/sequelize/src/dialects/mysql/query.js:46:25)
+    at /Users/able/Documents/GitHub/Sequelize template/node_modules/sequelize/src/sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.createTable (/Users/able/Documents/GitHub/Sequelize template/node_modules/sequelize/src/dialects/abstract/query-interface.js:229:12)
+    at async Function.sync (/Users/able/Documents/GitHub/Sequelize template/node_modules/sequelize/src/model.js:1353:7)
+    at async Sequelize.sync (/Users/able/Documents/GitHub/Sequelize template/node_modules/sequelize/src/sequelize.js:825:9)

@@ -6,7 +6,7 @@ import { logger } from '@utils/logger';
 
 
 const sequelize = new Sequelize.Sequelize('todolist', 'root', '0414', {
-  dialect: 'mysql',
+  dialect: 'mariadb',
   host: DB_HOST,
   port: DB_PORT,
   timezone: '+09:00',
@@ -32,7 +32,6 @@ const Users = UserModel(sequelize);
 const TodoLists = TodoModel(sequelize);
 
 Users.hasMany(TodoLists, {foreignKey : 'userId'})
-TodoLists.belongsTo(Users, {foreignKey : 'userId'})
 
 export const DB = {
   Users,
