@@ -4,6 +4,8 @@ import { DB } from '@database';
 import { CreateUserDto } from '@dtos/users.dto';
 import { HttpException } from '@/exceptions/httpException';
 import { User } from '@interfaces/users.interface';
+import { request } from 'express';
+import { ClientRequest } from 'http';
 
 @Service()
 export class UserService {

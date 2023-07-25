@@ -4,7 +4,9 @@ import { DB } from '@database';
 import { CreateUserDto } from '@dtos/users.dto';
 import { HttpException } from '@/exceptions/httpException';
 import { Todo } from '@/interfaces/todo.interface';
+import { User } from '@interfaces/users.interface';
 import { promises } from 'dns';
+import { signedCookies } from 'cookie-parser';
 
 
 @Service()
@@ -14,13 +16,22 @@ export class TodoService {
 
         return allTodoList;
     }
-    public async createTodo(userId, title, content) : Promise<Todo[]>{
-        const findTodo = await DB.TodoLists.findOne({
-            where : {
-                userId
-            }
-        })
 
-        const createTodoData = await DB.TodoLists.create({title, content})
+    public async createTodo(todoData) {
+        const createTodoData = await DB.TodoLists.create({...todoData});
+
+        return createTodoData
+    }
+
+    public async updateTodo (todoId, todoData) {
+        const updateTodoData = await DB.TodoLists.update(todoData, { where : {id : todoId}})
+    
+        return updateTodoData;
+    }
+
+    public async deleteTodo (todoId) {
+        const deleteTodoData = await DB.TodoLists.destroy({where : {id : todoId}})
+    
+        return deleteTodoData;
     }
 }

@@ -26,7 +26,7 @@ export class AuthService {
 
     const hashedPassword = await hash(userData.password, 10);
     const createUserData: User = await DB.Users.create({ ...userData, password: hashedPassword });
-
+    console.log(createCookie)
     return createUserData;
   }
 

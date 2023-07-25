@@ -16,12 +16,36 @@ export class TodoListController {
 
     public createTodo = async (req : Request, res : Response, next : NextFunction) => {
         try{
-            const {userId, title, content} = req.body;
-            const createTodoData = await this.todo.createTodo(title, content);
+            const todoData = req.body;
+            const createTodoData = await this.todo.createTodo(todoData);
 
-            res.status(200).json({data : createTodoData, msg : "성공"});
+            res.status(200).json({data : createTodoData, msg : "create"});
         }catch(error){
             next(error)
         }
     }
+
+    public updateTodo = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+          const todoId = Number(req.params.id);
+          const todoData = req.body;
+          const updateTodoData = await this.todo.updateTodo(todoId, todoData);
+      
+          res.status(200).json({ data: updateTodoData, message: 'updated' });
+        } catch (error) {
+          next(error);
+        }
+    }
+
+    public deleteTodo = async (req : Request, res : Response, next : NextFunction) => {
+        try {
+            const todoId = Number(req.params.id);
+            const deleteTodoData = await this.todo.deleteTodo(todoId);
+
+            res.status(200).json({ data: deleteTodoData, message: 'delete' });
+        }catch (error){
+            next(error)
+        }
+    }
+      
 }
