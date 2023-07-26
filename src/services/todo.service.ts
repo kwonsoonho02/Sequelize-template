@@ -11,8 +11,9 @@ import { signedCookies } from 'cookie-parser';
 
 @Service()
 export class TodoService {
-    public async findAllTodoList(): Promise<Todo[]> {
-        const allTodoList: Todo[] = await DB.TodoLists.findAll();
+    public async findAllTodoList(userId): Promise<Todo[]> {
+
+        const allTodoList: Todo[] = await DB.TodoLists.findAll({where : {userId}});
 
         return allTodoList;
     }

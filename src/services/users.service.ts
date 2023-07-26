@@ -16,6 +16,7 @@ export class UserService {
 
   public async findUserById(userId: number): Promise<User> {
     const findUser: User = await DB.Users.findByPk(userId);
+    console.log(findUser)
     if (!findUser) throw new HttpException(409, "User doesn't exist");
 
     return findUser;

@@ -1,5 +1,7 @@
 import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
 import { User } from '@interfaces/users.interface';
+import { TodoModel } from '@models/todos.model';
+import { userInfo } from 'os';
 
 export type UserCreationAttributes = Optional<User, 'id' | 'email' | 'password'>;
 
@@ -7,8 +9,6 @@ export class UserModel extends Model<User, UserCreationAttributes> implements Us
   public id: number;
   public email: string;
   public password: string;
-
-
 }
 
 export default function (sequelize: Sequelize): typeof UserModel {
@@ -29,6 +29,7 @@ export default function (sequelize: Sequelize): typeof UserModel {
       },
     },
     {
+      modelName: "UserModel",
       tableName: 'users',
       sequelize,
     },

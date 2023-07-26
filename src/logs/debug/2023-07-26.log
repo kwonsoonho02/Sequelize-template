@@ -1,0 +1,1088 @@
+2023-07-26 11:36:51 info: ::1 - - [Wed, 26 Jul 2023 02:36:51 GMT] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+2023-07-26 11:37:38 info: ::1 - - [Wed, 26 Jul 2023 02:37:38 GMT] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+2023-07-26 13:23:07 info: ::1 - - [Wed, 26 Jul 2023 04:23:07 GMT] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+2023-07-26 13:23:26 info: ::1 - - [Wed, 26 Jul 2023 04:23:26 GMT] "GET /logout HTTP/1.1" 404 145 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+2023-07-26 13:24:20 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel`;
+2023-07-26 13:24:20 info: ::1 - - [Wed, 26 Jul 2023 04:24:20 GMT] "GET /users HTTP/1.1" 200 771 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:24:57 error: [POST] /logout >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 13:24:57 info: ::1 - - [Wed, 26 Jul 2023 04:24:57 GMT] "POST /logout HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:25:06 info: ::1 - - [Wed, 26 Jul 2023 04:25:06 GMT] "GET /logout HTTP/1.1" 404 145 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+2023-07-26 13:25:53 info: =================================
+2023-07-26 13:25:53 info: ======= ENV: development =======
+2023-07-26 13:25:53 info: 🚀 App listening on the port 3000
+2023-07-26 13:25:53 info: =================================
+2023-07-26 13:25:53 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 13:25:53 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 13:25:53 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 13:25:53 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 13:25:53 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 13:26:02 info: ::1 - - [Wed, 26 Jul 2023 04:26:02 GMT] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+2023-07-26 13:31:11 info: =================================
+2023-07-26 13:31:11 info: ======= ENV: development =======
+2023-07-26 13:31:11 info: 🚀 App listening on the port 3000
+2023-07-26 13:31:11 info: =================================
+2023-07-26 13:31:11 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 13:31:11 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 13:31:11 info: 28ms Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER auto_increment , `email` VARCHAR(45) NOT NULL, `password` VARCHAR(255) NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2023-07-26 13:31:11 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 13:31:11 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 13:31:11 info: 24ms Executed (default): CREATE TABLE IF NOT EXISTS `todos` (`id` INTEGER NOT NULL auto_increment , `title` VARCHAR(255) NOT NULL, `content` VARCHAR(255) NOT NULL, `user_id` INTEGER NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2023-07-26 13:31:11 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 13:32:10 info: ::1 - - [Wed, 26 Jul 2023 04:32:10 GMT] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+2023-07-26 13:32:26 info: =================================
+2023-07-26 13:32:26 info: ======= ENV: development =======
+2023-07-26 13:32:26 info: 🚀 App listening on the port 3000
+2023-07-26 13:32:26 info: =================================
+2023-07-26 13:32:26 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 13:32:26 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 13:32:26 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 13:32:26 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 13:32:26 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 13:32:29 info: ::1 - - [Wed, 26 Jul 2023 04:32:29 GMT] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+2023-07-26 13:33:50 error: [POST] /users >> StatusCode:: 400, Message:: password must be shorter than or equal to 32 characters
+2023-07-26 13:33:50 info: ::1 - - [Wed, 26 Jul 2023 04:33:50 GMT] "POST /users HTTP/1.1" 400 69 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:33:57 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel`;
+2023-07-26 13:33:57 info: ::1 - - [Wed, 26 Jul 2023 04:33:57 GMT] "GET /users HTTP/1.1" 200 31 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:34:20 error: [POST] /signup >> StatusCode:: 400, Message:: email must be an email,password must be shorter than or equal to 32 characters,password must be longer than or equal to 9 characters,password should not be empty,password must be a string
+2023-07-26 13:34:20 info: ::1 - - [Wed, 26 Jul 2023 04:34:20 GMT] "POST /signup HTTP/1.1" 400 201 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:35:07 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`email` = 'gh3136@gmail.com' LIMIT 1;
+2023-07-26 13:35:07 info: 2ms Executed (default): INSERT INTO `users` (`id`,`email`,`password`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?); "gh3136@gmail.com", "$2b$10$QtgSa0yUHThdVb3SWKkel.azrbbZj4mFQudDKb86tfMWuj9qhAX1C", "2023-07-26 13:35:07.953", "2023-07-26 13:35:07.953"
+2023-07-26 13:35:07 info: ::1 - - [Wed, 26 Jul 2023 04:35:07 GMT] "POST /signup HTTP/1.1" 201 215 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:35:21 error: [GET] /todos >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 13:35:21 info: ::1 - - [Wed, 26 Jul 2023 04:35:21 GMT] "GET /todos HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:36:02 error: [POST] /todos >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 13:36:02 info: ::1 - - [Wed, 26 Jul 2023 04:36:02 GMT] "POST /todos HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:36:16 error: [POST] /login >> StatusCode:: 400, Message:: email must be an email,password must be shorter than or equal to 32 characters,password must be longer than or equal to 9 characters,password should not be empty,password must be a string
+2023-07-26 13:36:16 info: ::1 - - [Wed, 26 Jul 2023 04:36:16 GMT] "POST /login HTTP/1.1" 400 201 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:36:46 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`email` = 'gh3136@gmail.com' LIMIT 1;
+2023-07-26 13:36:46 info: ::1 - - [Wed, 26 Jul 2023 04:36:46 GMT] "POST /login HTTP/1.1" 200 214 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:37:07 info: ::1 - - [Wed, 26 Jul 2023 04:37:07 GMT] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+2023-07-26 13:38:08 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 13:38:08 error: [POST] /todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 13:38:08 info: ::1 - - [Wed, 26 Jul 2023 04:38:08 GMT] "POST /todos HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:39:16 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 13:39:16 info: 1ms Executed (default): INSERT INTO `todos` (`id`,`title`,`content`,`user_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?); "alstjqhrhtlvek", "alstjsms wkf wlsorh dlTDmfrk?", "1", "2023-07-26 13:39:16.076", "2023-07-26 13:39:16.076"
+2023-07-26 13:39:16 info: ::1 - - [Wed, 26 Jul 2023 04:39:16 GMT] "POST /todos HTTP/1.1" 200 190 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:39:23 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 13:39:23 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 13:39:23 info: ::1 - - [Wed, 26 Jul 2023 04:39:23 GMT] "GET /todos HTTP/1.1" 200 195 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:44:30 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 13:44:30 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`email` = 'gh3136@gmail.com' AND `UserModel`.`password` = '$2b$10$QtgSa0yUHThdVb3SWKkel.azrbbZj4mFQudDKb86tfMWuj9qhAX1C' LIMIT 1;
+2023-07-26 13:44:30 info: ::1 - - [Wed, 26 Jul 2023 04:44:30 GMT] "POST /logout HTTP/1.1" 200 215 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:44:33 error: [POST] /logout >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 13:44:33 info: ::1 - - [Wed, 26 Jul 2023 04:44:33 GMT] "POST /logout HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:44:37 error: [POST] /todos >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 13:44:37 info: ::1 - - [Wed, 26 Jul 2023 04:44:37 GMT] "POST /todos HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:44:41 error: [GET] /todos >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 13:44:41 info: ::1 - - [Wed, 26 Jul 2023 04:44:41 GMT] "GET /todos HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:47:17 error: [POST] /login >> StatusCode:: 400, Message:: email must be an email,password must be shorter than or equal to 32 characters,password must be longer than or equal to 9 characters,password should not be empty,password must be a string
+2023-07-26 13:47:17 info: ::1 - - [Wed, 26 Jul 2023 04:47:17 GMT] "POST /login HTTP/1.1" 400 201 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:48:00 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`email` = 'gh3136@gmail.com' LIMIT 1;
+2023-07-26 13:48:01 info: ::1 - - [Wed, 26 Jul 2023 04:48:01 GMT] "POST /login HTTP/1.1" 200 214 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:48:13 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 13:48:13 error: [POST] /todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 13:48:13 info: ::1 - - [Wed, 26 Jul 2023 04:48:13 GMT] "POST /todos HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:48:17 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 13:48:17 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 13:48:17 info: ::1 - - [Wed, 26 Jul 2023 04:48:17 GMT] "GET /todos HTTP/1.1" 200 195 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:48:22 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 13:48:22 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 13:48:22 info: ::1 - - [Wed, 26 Jul 2023 04:48:22 GMT] "GET /todos HTTP/1.1" 200 195 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:48:22 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 13:48:22 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 13:48:22 info: ::1 - - [Wed, 26 Jul 2023 04:48:22 GMT] "GET /todos HTTP/1.1" 200 195 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:50:30 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 13:50:30 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`email` = 'gh3136@gmail.com' AND `UserModel`.`password` = '$2b$10$QtgSa0yUHThdVb3SWKkel.azrbbZj4mFQudDKb86tfMWuj9qhAX1C' LIMIT 1;
+2023-07-26 13:50:30 info: ::1 - - [Wed, 26 Jul 2023 04:50:30 GMT] "POST /logout HTTP/1.1" 200 215 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:50:39 error: [GET] /todos >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 13:50:39 info: ::1 - - [Wed, 26 Jul 2023 04:50:39 GMT] "GET /todos HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:50:45 info: ::1 - - [Wed, 26 Jul 2023 04:50:45 GMT] "POST /singup HTTP/1.1" 404 146 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:51:31 error: [POST] /signup >> StatusCode:: 400, Message:: email must be an email
+2023-07-26 13:51:31 info: ::1 - - [Wed, 26 Jul 2023 04:51:31 GMT] "POST /signup HTTP/1.1" 400 36 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:51:52 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`email` = 'gh9375@gmail.com' LIMIT 1;
+2023-07-26 13:51:52 info: 2ms Executed (default): INSERT INTO `users` (`id`,`email`,`password`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?); "gh9375@gmail.com", "$2b$10$G2KeIDm2eUnUP5VUiqFoA.Q4SIJSTZ8UsrxGHzjL8OonzsvlIwQ4m", "2023-07-26 13:51:52.556", "2023-07-26 13:51:52.556"
+2023-07-26 13:51:52 info: ::1 - - [Wed, 26 Jul 2023 04:51:52 GMT] "POST /signup HTTP/1.1" 201 215 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:52:02 error: [GET] /todos >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 13:52:02 info: ::1 - - [Wed, 26 Jul 2023 04:52:02 GMT] "GET /todos HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:52:17 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`email` = 'gh9375@gmail.com' LIMIT 1;
+2023-07-26 13:52:18 info: ::1 - - [Wed, 26 Jul 2023 04:52:18 GMT] "POST /login HTTP/1.1" 200 214 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:52:22 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 13:52:22 error: [POST] /todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 13:52:22 info: ::1 - - [Wed, 26 Jul 2023 04:52:22 GMT] "POST /todos HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:52:26 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 13:52:26 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 13:52:26 info: ::1 - - [Wed, 26 Jul 2023 04:52:26 GMT] "GET /todos HTTP/1.1" 200 195 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:52:30 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 13:52:30 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 13:52:30 info: ::1 - - [Wed, 26 Jul 2023 04:52:30 GMT] "GET /todos HTTP/1.1" 200 195 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:52:55 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 13:52:55 error: [POST] /todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.userId cannot be null
+2023-07-26 13:52:55 info: ::1 - - [Wed, 26 Jul 2023 04:52:55 GMT] "POST /todos HTTP/1.1" 500 64 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:53:12 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 13:53:12 info: 1ms Executed (default): INSERT INTO `todos` (`id`,`title`,`content`,`user_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?); "gh9375@gmail.com", "rnjstnsgh21", "2", "2023-07-26 13:53:12.603", "2023-07-26 13:53:12.603"
+2023-07-26 13:53:12 info: ::1 - - [Wed, 26 Jul 2023 04:53:12 GMT] "POST /todos HTTP/1.1" 200 174 "-" "PostmanRuntime/7.32.3"
+2023-07-26 13:53:17 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 13:53:17 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 13:53:17 info: ::1 - - [Wed, 26 Jul 2023 04:53:17 GMT] "GET /todos HTTP/1.1" 200 344 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:04:37 info: =================================
+2023-07-26 14:04:37 info: ======= ENV: development =======
+2023-07-26 14:04:37 info: 🚀 App listening on the port 3000
+2023-07-26 14:04:37 info: =================================
+2023-07-26 14:04:37 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:04:37 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:04:37 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:04:37 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:04:37 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:12:27 info: =================================
+2023-07-26 14:12:27 info: ======= ENV: development =======
+2023-07-26 14:12:27 info: 🚀 App listening on the port 3000
+2023-07-26 14:12:27 info: =================================
+2023-07-26 14:12:27 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:12:27 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:12:27 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:12:27 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:12:27 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:12:53 info: =================================
+2023-07-26 14:12:53 info: ======= ENV: development =======
+2023-07-26 14:12:53 info: 🚀 App listening on the port 3000
+2023-07-26 14:12:53 info: =================================
+2023-07-26 14:12:53 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:12:53 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:12:53 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:12:53 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:12:53 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:16:19 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:16:19 info: 2ms Executed (default): INSERT INTO `todos` (`id`,`title`,`content`,`user_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?); "gh9375@gmail.com", "rnjstnsgh21", "1", "2023-07-26 14:16:19.126", "2023-07-26 14:16:19.126"
+2023-07-26 14:16:19 info: ::1 - - [Wed, 26 Jul 2023 05:16:19 GMT] "POST /todos HTTP/1.1" 200 174 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:16:23 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:16:23 error: [GET] /todos >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:16:23 info: ::1 - - [Wed, 26 Jul 2023 05:16:23 GMT] "GET /todos HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:16:27 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:16:27 error: [GET] /todos >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:16:27 info: ::1 - - [Wed, 26 Jul 2023 05:16:27 GMT] "GET /todos HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:16:49 info: =================================
+2023-07-26 14:16:49 info: ======= ENV: development =======
+2023-07-26 14:16:49 info: 🚀 App listening on the port 3000
+2023-07-26 14:16:49 info: =================================
+2023-07-26 14:16:49 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:16:49 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:16:49 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:16:49 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:16:49 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:17:18 info: =================================
+2023-07-26 14:17:18 info: ======= ENV: development =======
+2023-07-26 14:17:18 info: 🚀 App listening on the port 3000
+2023-07-26 14:17:18 info: =================================
+2023-07-26 14:17:18 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:17:18 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:17:18 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:17:18 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:17:18 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:17:20 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:17:20 error: [GET] /todos >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:17:20 info: ::1 - - [Wed, 26 Jul 2023 05:17:20 GMT] "GET /todos HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:17:21 info: 4ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:17:21 error: [GET] /todos >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:17:21 info: ::1 - - [Wed, 26 Jul 2023 05:17:21 GMT] "GET /todos HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:17:26 info: =================================
+2023-07-26 14:17:26 info: ======= ENV: development =======
+2023-07-26 14:17:26 info: 🚀 App listening on the port 3000
+2023-07-26 14:17:26 info: =================================
+2023-07-26 14:17:26 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:17:26 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:17:26 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:17:26 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:17:26 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:17:29 info: 2ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:17:29 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 14:17:29 info: ::1 - - [Wed, 26 Jul 2023 05:17:29 GMT] "GET /todos HTTP/1.1" 200 493 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:20:22 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:20:22 info: 2ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 14:20:22 info: ::1 - - [Wed, 26 Jul 2023 05:20:22 GMT] "GET /todos HTTP/1.1" 200 493 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:21:01 info: =================================
+2023-07-26 14:21:01 info: ======= ENV: development =======
+2023-07-26 14:21:01 info: 🚀 App listening on the port 3000
+2023-07-26 14:21:01 info: =================================
+2023-07-26 14:21:01 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:21:01 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:21:01 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:21:01 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:21:01 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:21:03 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:21:03 error: [GET] /todos >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:21:03 info: ::1 - - [Wed, 26 Jul 2023 05:21:03 GMT] "GET /todos HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:21:15 info: ::1 - - [Wed, 26 Jul 2023 05:21:15 GMT] "GET /todos/1 HTTP/1.1" 404 146 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:21:24 info: ::1 - - [Wed, 26 Jul 2023 05:21:24 GMT] "GET /todos/2 HTTP/1.1" 404 146 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:21:30 info: ::1 - - [Wed, 26 Jul 2023 05:21:30 GMT] "GET /todos/2 HTTP/1.1" 404 146 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:21:31 info: ::1 - - [Wed, 26 Jul 2023 05:21:31 GMT] "GET /todos/2 HTTP/1.1" 404 146 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:22:00 info: =================================
+2023-07-26 14:22:00 info: ======= ENV: development =======
+2023-07-26 14:22:00 info: 🚀 App listening on the port 3000
+2023-07-26 14:22:00 info: =================================
+2023-07-26 14:22:00 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:22:00 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:22:00 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:22:00 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:22:00 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:22:03 info: 2ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:22:03 error: [GET] /todos/2 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:22:03 info: ::1 - - [Wed, 26 Jul 2023 05:22:03 GMT] "GET /todos/2 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:22:10 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:22:10 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:22:10 info: ::1 - - [Wed, 26 Jul 2023 05:22:10 GMT] "GET /todos/1 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:22:23 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:22:23 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:22:23 info: ::1 - - [Wed, 26 Jul 2023 05:22:23 GMT] "GET /todos/1?userId=1 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:22:31 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:22:31 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:22:31 info: ::1 - - [Wed, 26 Jul 2023 05:22:31 GMT] "GET /todos/1?user_id=1 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:22:40 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:22:40 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:22:40 info: ::1 - - [Wed, 26 Jul 2023 05:22:40 GMT] "GET /todos/1?user_id=1 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:23:50 info: =================================
+2023-07-26 14:23:50 info: ======= ENV: development =======
+2023-07-26 14:23:50 info: 🚀 App listening on the port 3000
+2023-07-26 14:23:50 info: =================================
+2023-07-26 14:23:50 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:23:50 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:23:50 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:23:50 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:23:50 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:23:53 info: 6ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:23:53 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:23:53 info: ::1 - - [Wed, 26 Jul 2023 05:23:53 GMT] "GET /todos/1?user_id=1 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:23:54 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:23:54 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:23:54 info: ::1 - - [Wed, 26 Jul 2023 05:23:54 GMT] "GET /todos/1?user_id=1 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:23:54 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:23:54 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:23:54 info: ::1 - - [Wed, 26 Jul 2023 05:23:54 GMT] "GET /todos/1?user_id=1 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:24:03 info: =================================
+2023-07-26 14:24:03 info: ======= ENV: development =======
+2023-07-26 14:24:03 info: 🚀 App listening on the port 3000
+2023-07-26 14:24:03 info: =================================
+2023-07-26 14:24:03 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:24:03 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:24:03 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:24:03 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:24:03 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:24:05 info: 2ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:24:05 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:24:05 info: ::1 - - [Wed, 26 Jul 2023 05:24:05 GMT] "GET /todos/1?user_id=1 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:24:07 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:24:07 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:24:07 info: ::1 - - [Wed, 26 Jul 2023 05:24:07 GMT] "GET /todos/1?user_id=1 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:24:58 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:24:58 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:24:58 info: ::1 - - [Wed, 26 Jul 2023 05:24:58 GMT] "GET /todos/1?user_id=1 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:25:02 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:25:02 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:25:02 info: ::1 - - [Wed, 26 Jul 2023 05:25:02 GMT] "GET /todos/1?user_id=2 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:25:38 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:25:38 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:25:38 info: ::1 - - [Wed, 26 Jul 2023 05:25:38 GMT] "GET /todos/1?userId=2 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:25:39 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:25:39 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:25:39 info: ::1 - - [Wed, 26 Jul 2023 05:25:39 GMT] "GET /todos/1?userId=2 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:26:00 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:26:00 error: [GET] /todos/userId=2 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:26:00 info: ::1 - - [Wed, 26 Jul 2023 05:26:00 GMT] "GET /todos/userId=2 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:26:01 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:26:01 error: [GET] /todos/userId=2 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:26:01 info: ::1 - - [Wed, 26 Jul 2023 05:26:01 GMT] "GET /todos/userId=2 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:26:14 info: ::1 - - [Wed, 26 Jul 2023 05:26:14 GMT] "GET /todos/?user_id=1 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:26:23 info: ::1 - - [Wed, 26 Jul 2023 05:26:23 GMT] "GET /todos/?user_id=2 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:27:05 info: ::1 - - [Wed, 26 Jul 2023 05:27:05 GMT] "GET /todos/?user_id=2 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:27:12 info: ::1 - - [Wed, 26 Jul 2023 05:27:12 GMT] "GET /todos/?user_id=1 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:28:00 info: =================================
+2023-07-26 14:28:00 info: ======= ENV: development =======
+2023-07-26 14:28:00 info: 🚀 App listening on the port 3000
+2023-07-26 14:28:00 info: =================================
+2023-07-26 14:28:00 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:28:00 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:28:00 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:28:00 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:28:00 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:28:04 info: ::1 - - [Wed, 26 Jul 2023 05:28:04 GMT] "GET /todos/?user_id=1 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:28:05 info: ::1 - - [Wed, 26 Jul 2023 05:28:05 GMT] "GET /todos/?user_id=1 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:28:34 info: =================================
+2023-07-26 14:28:34 info: ======= ENV: development =======
+2023-07-26 14:28:34 info: 🚀 App listening on the port 3000
+2023-07-26 14:28:34 info: =================================
+2023-07-26 14:28:34 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:28:34 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:28:34 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:28:34 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:28:34 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:29:08 info: =================================
+2023-07-26 14:29:08 info: ======= ENV: development =======
+2023-07-26 14:29:08 info: 🚀 App listening on the port 3000
+2023-07-26 14:29:08 info: =================================
+2023-07-26 14:29:08 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:29:08 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:29:08 info: 2ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:29:08 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:29:08 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:29:29 info: =================================
+2023-07-26 14:29:29 info: ======= ENV: development =======
+2023-07-26 14:29:29 info: 🚀 App listening on the port 3000
+2023-07-26 14:29:29 info: =================================
+2023-07-26 14:29:29 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:29:29 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:29:29 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:29:29 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:29:29 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:29:36 info: ::1 - - [Wed, 26 Jul 2023 05:29:36 GMT] "GET /todos/?user_id=1 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:29:46 info: ::1 - - [Wed, 26 Jul 2023 05:29:46 GMT] "GET /todos/?user_id=1 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:29:58 info: ::1 - - [Wed, 26 Jul 2023 05:29:58 GMT] "GET /todos HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:30:02 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:30:02 error: [GET] /todos/2 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:30:02 info: ::1 - - [Wed, 26 Jul 2023 05:30:02 GMT] "GET /todos/2 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:30:04 info: 2ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 14:30:04 error: [GET] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-26 14:30:04 info: ::1 - - [Wed, 26 Jul 2023 05:30:04 GMT] "GET /todos/1 HTTP/1.1" 500 73 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:30:21 info: ::1 - - [Wed, 26 Jul 2023 05:30:21 GMT] "GET /todos/?id=1 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:30:33 info: ::1 - - [Wed, 26 Jul 2023 05:30:33 GMT] "GET /todos/?user_id=1 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:32:09 info: =================================
+2023-07-26 14:32:09 info: ======= ENV: development =======
+2023-07-26 14:32:09 info: 🚀 App listening on the port 3000
+2023-07-26 14:32:09 info: =================================
+2023-07-26 14:32:09 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:32:09 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:32:09 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:32:09 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:32:09 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:32:29 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel`;
+2023-07-26 14:32:29 info: ::1 - - [Wed, 26 Jul 2023 05:32:29 GMT] "GET /users/?user_id=1 HTTP/1.1" 200 406 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:32:39 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel`;
+2023-07-26 14:32:39 info: ::1 - - [Wed, 26 Jul 2023 05:32:39 GMT] "GET /users/?user_id=2 HTTP/1.1" 200 406 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:32:43 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel`;
+2023-07-26 14:32:43 info: ::1 - - [Wed, 26 Jul 2023 05:32:43 GMT] "GET /users/?user_id=3 HTTP/1.1" 200 406 "-" "PostmanRuntime/7.32.3"
+2023-07-26 14:47:44 info: =================================
+2023-07-26 14:47:44 info: ======= ENV: development =======
+2023-07-26 14:47:44 info: 🚀 App listening on the port 3000
+2023-07-26 14:47:44 info: =================================
+2023-07-26 14:47:44 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:47:44 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:47:44 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:47:44 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:47:44 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:55:11 info: =================================
+2023-07-26 14:55:11 info: ======= ENV: development =======
+2023-07-26 14:55:11 info: 🚀 App listening on the port 3000
+2023-07-26 14:55:11 info: =================================
+2023-07-26 14:55:11 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:55:11 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:55:11 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:55:11 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:55:11 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 14:55:22 info: =================================
+2023-07-26 14:55:22 info: ======= ENV: development =======
+2023-07-26 14:55:22 info: 🚀 App listening on the port 3000
+2023-07-26 14:55:22 info: =================================
+2023-07-26 14:55:22 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 14:55:22 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:55:22 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 14:55:22 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 14:55:22 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 15:13:25 info: =================================
+2023-07-26 15:13:25 info: ======= ENV: development =======
+2023-07-26 15:13:25 info: 🚀 App listening on the port 3000
+2023-07-26 15:13:25 info: =================================
+2023-07-26 15:13:25 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 15:13:25 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 15:13:25 info: 23ms Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER auto_increment , `email` VARCHAR(45) NOT NULL, `password` VARCHAR(255) NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2023-07-26 15:13:25 info: 3ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 15:13:25 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 15:13:25 info: 23ms Executed (default): CREATE TABLE IF NOT EXISTS `todos` (`id` INTEGER NOT NULL auto_increment , `title` VARCHAR(255) NOT NULL, `content` VARCHAR(255) NOT NULL, `user_id` INTEGER NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `UserModel` (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2023-07-26 15:28:50 info: =================================
+2023-07-26 15:28:50 info: ======= ENV: development =======
+2023-07-26 15:28:50 info: 🚀 App listening on the port 3000
+2023-07-26 15:28:50 info: =================================
+2023-07-26 15:28:50 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 15:28:50 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 15:28:50 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 15:28:50 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 15:28:50 info: 30ms Executed (default): CREATE TABLE IF NOT EXISTS `todos` (`id` INTEGER NOT NULL auto_increment , `title` VARCHAR(255) NOT NULL, `content` VARCHAR(255) NOT NULL, `user_id` INTEGER NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `UserModel` (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2023-07-26 15:32:47 info: =================================
+2023-07-26 15:32:47 info: ======= ENV: development =======
+2023-07-26 15:32:47 info: 🚀 App listening on the port 3000
+2023-07-26 15:32:47 info: =================================
+2023-07-26 15:32:47 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 15:32:47 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 15:32:47 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 15:32:47 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 15:32:47 info: 24ms Executed (default): CREATE TABLE IF NOT EXISTS `todos` (`id` INTEGER NOT NULL auto_increment , `title` VARCHAR(255) NOT NULL, `content` VARCHAR(255) NOT NULL, `user_id` INTEGER NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `UserModel` (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2023-07-26 15:33:10 info: =================================
+2023-07-26 15:33:10 info: ======= ENV: development =======
+2023-07-26 15:33:10 info: 🚀 App listening on the port 3000
+2023-07-26 15:33:10 info: =================================
+2023-07-26 15:33:10 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 15:33:10 info: 2ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 15:33:10 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 15:33:10 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 15:33:10 info: 22ms Executed (default): CREATE TABLE IF NOT EXISTS `todos` (`id` INTEGER NOT NULL auto_increment , `title` VARCHAR(255) NOT NULL, `content` VARCHAR(255) NOT NULL, `user_id` INTEGER NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `UserModel` (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2023-07-26 16:05:56 info: =================================
+2023-07-26 16:05:56 info: ======= ENV: development =======
+2023-07-26 16:05:56 info: 🚀 App listening on the port 3000
+2023-07-26 16:05:56 info: =================================
+2023-07-26 16:05:56 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:05:56 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:05:56 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:05:56 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:05:56 info: 23ms Executed (default): CREATE TABLE IF NOT EXISTS `todos` (`id` INTEGER NOT NULL auto_increment , `title` VARCHAR(255) NOT NULL, `content` VARCHAR(255) NOT NULL, `user_id` INTEGER NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2023-07-26 16:05:56 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:05:59 info: =================================
+2023-07-26 16:05:59 info: ======= ENV: development =======
+2023-07-26 16:05:59 info: 🚀 App listening on the port 3000
+2023-07-26 16:05:59 info: =================================
+2023-07-26 16:05:59 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:05:59 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:05:59 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:05:59 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:05:59 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:07:20 info: =================================
+2023-07-26 16:07:20 info: ======= ENV: development =======
+2023-07-26 16:07:20 info: 🚀 App listening on the port 3000
+2023-07-26 16:07:20 info: =================================
+2023-07-26 16:07:20 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:07:20 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:07:20 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:07:20 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:07:20 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:07:27 info: =================================
+2023-07-26 16:07:27 info: ======= ENV: development =======
+2023-07-26 16:07:27 info: 🚀 App listening on the port 3000
+2023-07-26 16:07:27 info: =================================
+2023-07-26 16:07:27 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:07:27 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:07:27 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:07:27 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:07:27 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:07:29 info: =================================
+2023-07-26 16:07:29 info: ======= ENV: development =======
+2023-07-26 16:07:29 info: 🚀 App listening on the port 3000
+2023-07-26 16:07:29 info: =================================
+2023-07-26 16:07:29 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:07:29 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:07:29 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:07:29 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:07:29 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:07:44 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel`;
+2023-07-26 16:07:44 info: ::1 - - [Wed, 26 Jul 2023 07:07:44 GMT] "GET /users/?user_id=3 HTTP/1.1" 200 31 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:07:48 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel`;
+2023-07-26 16:07:48 info: ::1 - - [Wed, 26 Jul 2023 07:07:48 GMT] "GET /users/?user_id=2 HTTP/1.1" 200 31 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:07:50 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel`;
+2023-07-26 16:07:50 info: ::1 - - [Wed, 26 Jul 2023 07:07:50 GMT] "GET /users/?user_id=1 HTTP/1.1" 200 31 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:11:17 info: ::1 - - [Wed, 26 Jul 2023 07:11:17 GMT] "GET /todos/?user_id=1 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:11:20 info: ::1 - - [Wed, 26 Jul 2023 07:11:20 GMT] "GET /todos/?user_id=1 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:11:47 info: =================================
+2023-07-26 16:11:47 info: ======= ENV: development =======
+2023-07-26 16:11:47 info: 🚀 App listening on the port 3000
+2023-07-26 16:11:47 info: =================================
+2023-07-26 16:11:47 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:11:47 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:11:47 info: 24ms Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER auto_increment , `email` VARCHAR(45) NOT NULL, `password` VARCHAR(255) NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2023-07-26 16:11:47 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:11:47 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:11:47 info: 24ms Executed (default): CREATE TABLE IF NOT EXISTS `todos` (`id` INTEGER NOT NULL auto_increment , `title` VARCHAR(255) NOT NULL, `content` VARCHAR(255) NOT NULL, `user_id` INTEGER NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2023-07-26 16:11:47 info: 2ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:12:04 info: ::1 - - [Wed, 26 Jul 2023 07:12:04 GMT] "GET /todos/ HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:12:10 info: ::1 - - [Wed, 26 Jul 2023 07:12:10 GMT] "GET /todos HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:12:26 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel`;
+2023-07-26 16:12:26 info: ::1 - - [Wed, 26 Jul 2023 07:12:26 GMT] "GET /users HTTP/1.1" 200 31 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:12:32 info: ::1 - - [Wed, 26 Jul 2023 07:12:32 GMT] "GET /todos HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:12:57 info: =================================
+2023-07-26 16:12:57 info: ======= ENV: development =======
+2023-07-26 16:12:57 info: 🚀 App listening on the port 3000
+2023-07-26 16:12:57 info: =================================
+2023-07-26 16:12:57 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:12:57 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:12:57 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:12:57 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:12:57 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:13:04 info: =================================
+2023-07-26 16:13:04 info: ======= ENV: development =======
+2023-07-26 16:13:04 info: 🚀 App listening on the port 3000
+2023-07-26 16:13:04 info: =================================
+2023-07-26 16:13:04 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:13:04 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:13:04 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:13:04 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:13:04 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:13:06 info: ::1 - - [Wed, 26 Jul 2023 07:13:06 GMT] "GET /todos HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:13:35 error: [GET] /todos/1 >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 16:13:35 info: ::1 - - [Wed, 26 Jul 2023 07:13:35 GMT] "GET /todos/1 HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:13:37 error: [GET] /todos/2 >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 16:13:37 info: ::1 - - [Wed, 26 Jul 2023 07:13:37 GMT] "GET /todos/2 HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:13:38 error: [GET] /todos/3 >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 16:13:38 info: ::1 - - [Wed, 26 Jul 2023 07:13:38 GMT] "GET /todos/3 HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:13:55 error: [POST] /signup >> StatusCode:: 400, Message:: email must be an email,password must be shorter than or equal to 32 characters,password must be longer than or equal to 9 characters,password should not be empty,password must be a string
+2023-07-26 16:13:55 info: ::1 - - [Wed, 26 Jul 2023 07:13:55 GMT] "POST /signup HTTP/1.1" 400 201 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:14:21 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`email` = 'gh3136@gmail.com' LIMIT 1;
+2023-07-26 16:14:21 info: 1ms Executed (default): INSERT INTO `users` (`id`,`email`,`password`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?); "gh3136@gmail.com", "$2b$10$pbcgosbWaxuTS0FFoytCFOkjOU9IRoElf/QrYDOSy/vrm0f3TB3ae", "2023-07-26 16:14:21.710", "2023-07-26 16:14:21.710"
+2023-07-26 16:14:21 info: ::1 - - [Wed, 26 Jul 2023 07:14:21 GMT] "POST /signup HTTP/1.1" 201 215 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:14:30 info: 3ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`email` = 'gh3136@gmail.com' LIMIT 1;
+2023-07-26 16:14:30 info: ::1 - - [Wed, 26 Jul 2023 07:14:30 GMT] "POST /login HTTP/1.1" 200 214 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:14:37 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:14:37 error: [POST] /todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 16:14:37 info: ::1 - - [Wed, 26 Jul 2023 07:14:37 GMT] "POST /todos HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:14:45 info: ::1 - - [Wed, 26 Jul 2023 07:14:45 GMT] "GET /todos HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:14:48 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:14:48 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:14:48 info: ::1 - - [Wed, 26 Jul 2023 07:14:48 GMT] "GET /todos/1 HTTP/1.1" 200 31 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:14:51 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:14:51 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:14:51 info: ::1 - - [Wed, 26 Jul 2023 07:14:51 GMT] "GET /todos/2 HTTP/1.1" 200 31 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:14:53 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:14:53 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:14:53 info: ::1 - - [Wed, 26 Jul 2023 07:14:53 GMT] "GET /todos/3 HTTP/1.1" 200 31 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:14:54 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:14:54 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:14:54 info: ::1 - - [Wed, 26 Jul 2023 07:14:54 GMT] "GET /todos/4 HTTP/1.1" 200 31 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:16:30 error: [POST] /todos >> StatusCode:: 400, Message:: Unexpected token } in JSON at position 9
+2023-07-26 16:16:30 info: ::1 - - [Wed, 26 Jul 2023 07:16:30 GMT] "POST /todos HTTP/1.1" 400 54 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:17:31 info: =================================
+2023-07-26 16:17:31 info: ======= ENV: development =======
+2023-07-26 16:17:31 info: 🚀 App listening on the port 3000
+2023-07-26 16:17:31 info: =================================
+2023-07-26 16:17:31 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:17:31 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:17:31 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:17:31 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:17:31 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:17:40 error: [GET] /users >> StatusCode:: 400, Message:: Unexpected token } in JSON at position 9
+2023-07-26 16:17:40 info: ::1 - - [Wed, 26 Jul 2023 07:17:40 GMT] "GET /users HTTP/1.1" 400 54 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:17:43 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel`;
+2023-07-26 16:17:43 info: ::1 - - [Wed, 26 Jul 2023 07:17:43 GMT] "GET /users HTTP/1.1" 200 218 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:17:54 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:17:54 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:17:54 info: ::1 - - [Wed, 26 Jul 2023 07:17:54 GMT] "GET /todos/1 HTTP/1.1" 200 31 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:18:01 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:18:01 error: [POST] /todos/1 >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 16:18:01 info: ::1 - - [Wed, 26 Jul 2023 07:18:01 GMT] "POST /todos/1 HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:18:28 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:18:28 error: [POST] /todos/1 >> StatusCode:: 500, Message:: notNull Violation: TodoModel.userId cannot be null
+2023-07-26 16:18:28 info: ::1 - - [Wed, 26 Jul 2023 07:18:28 GMT] "POST /todos/1 HTTP/1.1" 500 64 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:18:43 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:18:43 info: 3ms Executed (default): INSERT INTO `todos` (`id`,`title`,`content`,`user_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?); "alstjqhrh tlvek", "gkgkgkgkgkgk", "1", "2023-07-26 16:18:43.373", "2023-07-26 16:18:43.373"
+2023-07-26 16:18:43 info: ::1 - - [Wed, 26 Jul 2023 07:18:43 GMT] "POST /todos/1 HTTP/1.1" 200 174 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:18:47 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:18:47 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:18:47 info: ::1 - - [Wed, 26 Jul 2023 07:18:47 GMT] "GET /todos/1 HTTP/1.1" 200 179 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:18:51 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:18:51 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:18:51 info: ::1 - - [Wed, 26 Jul 2023 07:18:51 GMT] "GET /todos/2 HTTP/1.1" 200 179 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:18:55 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:18:55 info: 2ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:18:55 info: ::1 - - [Wed, 26 Jul 2023 07:18:55 GMT] "GET /todos/1 HTTP/1.1" 200 179 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:18:59 info: ::1 - - [Wed, 26 Jul 2023 07:18:59 GMT] "GET /todos HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:19:22 error: [POST] /signup >> StatusCode:: 400, Message:: email must be an email,password must be shorter than or equal to 32 characters,password must be longer than or equal to 9 characters,password should not be empty,password must be a string
+2023-07-26 16:19:22 info: ::1 - - [Wed, 26 Jul 2023 07:19:22 GMT] "POST /signup HTTP/1.1" 400 201 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:19:56 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`email` = 'gh9375@gmail.com' LIMIT 1;
+2023-07-26 16:19:56 info: 1ms Executed (default): INSERT INTO `users` (`id`,`email`,`password`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?); "gh9375@gmail.com", "$2b$10$Ptp4Q85pbkzq6nCwwDEC0e1qmi4QM6HdA9s1O8YG3hRpBUPxoBaC2", "2023-07-26 16:19:56.279", "2023-07-26 16:19:56.279"
+2023-07-26 16:19:56 info: ::1 - - [Wed, 26 Jul 2023 07:19:56 GMT] "POST /signup HTTP/1.1" 201 215 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:20:05 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`email` = 'gh9375@gmail.com' LIMIT 1;
+2023-07-26 16:20:05 info: ::1 - - [Wed, 26 Jul 2023 07:20:05 GMT] "POST /login HTTP/1.1" 200 214 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:20:10 info: ::1 - - [Wed, 26 Jul 2023 07:20:10 GMT] "POST /todos HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:20:13 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:20:13 error: [POST] /todos/1 >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 16:20:13 info: ::1 - - [Wed, 26 Jul 2023 07:20:13 GMT] "POST /todos/1 HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:20:19 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:20:19 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:20:19 info: ::1 - - [Wed, 26 Jul 2023 07:20:19 GMT] "GET /todos/1 HTTP/1.1" 200 179 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:21:02 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:21:02 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:21:02 info: ::1 - - [Wed, 26 Jul 2023 07:21:02 GMT] "GET /todos/2 HTTP/1.1" 200 179 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:21:07 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:21:07 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:21:07 info: ::1 - - [Wed, 26 Jul 2023 07:21:07 GMT] "GET /todos/2 HTTP/1.1" 200 179 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:21:10 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:21:10 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:21:10 info: ::1 - - [Wed, 26 Jul 2023 07:21:10 GMT] "GET /todos/1 HTTP/1.1" 200 179 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:21:13 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:21:13 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:21:13 info: ::1 - - [Wed, 26 Jul 2023 07:21:13 GMT] "GET /todos/2 HTTP/1.1" 200 179 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:21:14 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:21:14 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:21:14 info: ::1 - - [Wed, 26 Jul 2023 07:21:14 GMT] "GET /todos/3 HTTP/1.1" 200 179 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:21:16 info: 5ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:21:16 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:21:16 info: ::1 - - [Wed, 26 Jul 2023 07:21:16 GMT] "GET /todos/4 HTTP/1.1" 200 179 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:21:17 info: ::1 - - [Wed, 26 Jul 2023 07:21:17 GMT] "GET /todos HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:21:20 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:21:20 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:21:20 info: ::1 - - [Wed, 26 Jul 2023 07:21:20 GMT] "GET /todos/2 HTTP/1.1" 200 179 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:22:02 info: ::1 - - [Wed, 26 Jul 2023 07:22:02 GMT] "GET /todos?user_id=2 HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:22:04 info: ::1 - - [Wed, 26 Jul 2023 07:22:04 GMT] "GET /todos?user_id=2 HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:22:25 info: =================================
+2023-07-26 16:22:25 info: ======= ENV: development =======
+2023-07-26 16:22:25 info: 🚀 App listening on the port 3000
+2023-07-26 16:22:25 info: =================================
+2023-07-26 16:22:25 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:22:25 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:22:25 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:22:25 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:22:25 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:22:27 info: ::1 - - [Wed, 26 Jul 2023 07:22:27 GMT] "GET /todos?user_id=2 HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:22:27 info: ::1 - - [Wed, 26 Jul 2023 07:22:27 GMT] "GET /todos?user_id=2 HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:22:30 info: ::1 - - [Wed, 26 Jul 2023 07:22:30 GMT] "GET /todos?user_id=1 HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:22:41 info: =================================
+2023-07-26 16:22:41 info: ======= ENV: development =======
+2023-07-26 16:22:41 info: 🚀 App listening on the port 3000
+2023-07-26 16:22:41 info: =================================
+2023-07-26 16:22:42 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:22:42 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:22:42 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:22:42 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:22:42 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:22:45 info: ::1 - - [Wed, 26 Jul 2023 07:22:45 GMT] "GET /todos?user_id=2 HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:22:58 info: =================================
+2023-07-26 16:22:58 info: ======= ENV: development =======
+2023-07-26 16:22:58 info: 🚀 App listening on the port 3000
+2023-07-26 16:22:58 info: =================================
+2023-07-26 16:22:58 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:22:58 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:22:58 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:22:58 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:22:58 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:23:47 info: ::1 - - [Wed, 26 Jul 2023 07:23:47 GMT] "GET /todos/?user_id=2 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:23:50 info: ::1 - - [Wed, 26 Jul 2023 07:23:50 GMT] "GET /todos/?user_id=1 HTTP/1.1" 404 145 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:24:42 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:24:42 error: [POST] /todos/1 >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 16:24:42 info: ::1 - - [Wed, 26 Jul 2023 07:24:42 GMT] "POST /todos/1 HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:24:44 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:24:44 error: [POST] /todos/2 >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 16:24:44 info: ::1 - - [Wed, 26 Jul 2023 07:24:44 GMT] "POST /todos/2 HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:24:45 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:24:45 error: [POST] /todos/3 >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 16:24:45 info: ::1 - - [Wed, 26 Jul 2023 07:24:45 GMT] "POST /todos/3 HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:24:47 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:24:47 error: [POST] /todos/1 >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 16:24:47 info: ::1 - - [Wed, 26 Jul 2023 07:24:47 GMT] "POST /todos/1 HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:24:51 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:24:51 error: [POST] /todos/1 >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 16:24:51 info: ::1 - - [Wed, 26 Jul 2023 07:24:51 GMT] "POST /todos/1 HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:25:38 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:25:38 info: 2ms Executed (default): INSERT INTO `todos` (`id`,`title`,`content`,`user_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?); "gkgkgk", "sdfsdf", 2, "2023-07-26 16:25:38.622", "2023-07-26 16:25:38.622"
+2023-07-26 16:25:38 info: ::1 - - [Wed, 26 Jul 2023 07:25:38 GMT] "POST /todos/1 HTTP/1.1" 200 157 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:25:43 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:25:43 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:25:43 info: ::1 - - [Wed, 26 Jul 2023 07:25:43 GMT] "GET /todos/2 HTTP/1.1" 200 313 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:25:45 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:25:45 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:25:45 info: ::1 - - [Wed, 26 Jul 2023 07:25:45 GMT] "GET /todos/1 HTTP/1.1" 200 313 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:25:46 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:25:46 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:25:46 info: ::1 - - [Wed, 26 Jul 2023 07:25:46 GMT] "GET /todos/2 HTTP/1.1" 200 313 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:25:48 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:25:48 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:25:48 info: ::1 - - [Wed, 26 Jul 2023 07:25:48 GMT] "GET /todos/3 HTTP/1.1" 200 313 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:25:49 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:25:49 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:25:49 info: ::1 - - [Wed, 26 Jul 2023 07:25:49 GMT] "GET /todos/2 HTTP/1.1" 200 313 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:25:49 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:25:49 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:25:49 info: ::1 - - [Wed, 26 Jul 2023 07:25:49 GMT] "GET /todos/1 HTTP/1.1" 200 313 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:26:08 info: =================================
+2023-07-26 16:26:08 info: ======= ENV: development =======
+2023-07-26 16:26:08 info: 🚀 App listening on the port 3000
+2023-07-26 16:26:08 info: =================================
+2023-07-26 16:26:08 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:26:08 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:26:08 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:26:08 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:26:08 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:26:10 info: ::1 - - [Wed, 26 Jul 2023 07:26:10 GMT] "GET /todos/1 HTTP/1.1" 404 146 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:26:13 info: 2ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:26:13 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:26:13 info: ::1 - - [Wed, 26 Jul 2023 07:26:13 GMT] "GET /todos HTTP/1.1" 200 313 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:27:32 info: =================================
+2023-07-26 16:27:32 info: ======= ENV: development =======
+2023-07-26 16:27:32 info: 🚀 App listening on the port 3000
+2023-07-26 16:27:32 info: =================================
+2023-07-26 16:27:32 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:27:32 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:27:32 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:27:32 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:27:32 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:27:37 info: ::1 - - [Wed, 26 Jul 2023 07:27:37 GMT] "GET / HTTP/1.1" 404 139 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:27:42 info: ::1 - - [Wed, 26 Jul 2023 07:27:42 GMT] "GET /users/todo HTTP/1.1" 404 149 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:27:45 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:27:45 info: 2ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:27:45 info: ::1 - - [Wed, 26 Jul 2023 07:27:45 GMT] "GET /users/todos HTTP/1.1" 200 313 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:28:45 info: ::1 - - [Wed, 26 Jul 2023 07:28:45 GMT] "POST /users/todos HTTP/1.1" 404 151 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:29:00 info: =================================
+2023-07-26 16:29:00 info: ======= ENV: development =======
+2023-07-26 16:29:00 info: 🚀 App listening on the port 3000
+2023-07-26 16:29:00 info: =================================
+2023-07-26 16:29:00 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:29:00 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:29:00 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:29:00 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:29:00 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:29:03 info: 4ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:29:03 info: 1ms Executed (default): INSERT INTO `todos` (`id`,`title`,`content`,`user_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?); "11111", "22222", 2, "2023-07-26 16:29:03.601", "2023-07-26 16:29:03.601"
+2023-07-26 16:29:03 info: ::1 - - [Wed, 26 Jul 2023 07:29:03 GMT] "POST /users/todos HTTP/1.1" 200 155 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:29:09 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:29:09 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:29:09 info: ::1 - - [Wed, 26 Jul 2023 07:29:09 GMT] "GET /users/todos HTTP/1.1" 200 445 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:30:30 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel`;
+2023-07-26 16:30:30 info: ::1 - - [Wed, 26 Jul 2023 07:30:30 GMT] "GET /users HTTP/1.1" 200 406 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:30:37 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:30:37 info: ::1 - - [Wed, 26 Jul 2023 07:30:37 GMT] "GET /users/2 HTTP/1.1" 200 216 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:30:38 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:30:38 info: ::1 - - [Wed, 26 Jul 2023 07:30:38 GMT] "GET /users/1 HTTP/1.1" 200 216 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:30:39 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:30:39 info: ::1 - - [Wed, 26 Jul 2023 07:30:39 GMT] "GET /users/2 HTTP/1.1" 200 216 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:30:40 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:30:40 info: ::1 - - [Wed, 26 Jul 2023 07:30:40 GMT] "GET /users/1 HTTP/1.1" 200 216 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:30:46 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:30:46 info: ::1 - - [Wed, 26 Jul 2023 07:30:46 GMT] "GET /users/2 HTTP/1.1" 200 216 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:30:47 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:30:47 info: ::1 - - [Wed, 26 Jul 2023 07:30:47 GMT] "GET /users/1 HTTP/1.1" 200 216 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:34:03 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:34:03 info: ::1 - - [Wed, 26 Jul 2023 07:34:03 GMT] "GET /users/1?user_id=1 HTTP/1.1" 200 216 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:34:05 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:34:05 info: ::1 - - [Wed, 26 Jul 2023 07:34:05 GMT] "GET /users/1?user_id=1 HTTP/1.1" 200 216 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:34:11 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:34:11 info: ::1 - - [Wed, 26 Jul 2023 07:34:11 GMT] "GET /users/1?user_id=2 HTTP/1.1" 200 216 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:34:15 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel`;
+2023-07-26 16:34:15 info: ::1 - - [Wed, 26 Jul 2023 07:34:15 GMT] "GET /users/?user_id=2 HTTP/1.1" 200 406 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:34:20 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel`;
+2023-07-26 16:34:20 info: ::1 - - [Wed, 26 Jul 2023 07:34:20 GMT] "GET /users/?user_id=1 HTTP/1.1" 200 406 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:34:26 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:34:26 info: ::1 - - [Wed, 26 Jul 2023 07:34:26 GMT] "GET /users/2 HTTP/1.1" 200 216 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:34:28 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 16:34:28 info: ::1 - - [Wed, 26 Jul 2023 07:34:28 GMT] "GET /users/1 HTTP/1.1" 200 216 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:36:52 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:36:52 info: ::1 - - [Wed, 26 Jul 2023 07:36:52 GMT] "GET /users/2 HTTP/1.1" 200 216 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:36:56 info: ::1 - - [Wed, 26 Jul 2023 07:36:56 GMT] "GET /users/2/todo HTTP/1.1" 404 151 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:37:29 info: =================================
+2023-07-26 16:37:29 info: ======= ENV: development =======
+2023-07-26 16:37:29 info: 🚀 App listening on the port 3000
+2023-07-26 16:37:29 info: =================================
+2023-07-26 16:37:29 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:37:29 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:37:29 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:37:29 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:37:29 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:37:33 info: ::1 - - [Wed, 26 Jul 2023 07:37:33 GMT] "GET /users/2/todo HTTP/1.1" 404 151 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:37:33 info: ::1 - - [Wed, 26 Jul 2023 07:37:33 GMT] "GET /users/2/todo HTTP/1.1" 404 151 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:37:36 info: ::1 - - [Wed, 26 Jul 2023 07:37:36 GMT] "GET /users/2/todoa HTTP/1.1" 404 152 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:37:40 info: ::1 - - [Wed, 26 Jul 2023 07:37:40 GMT] "GET /users/1/todoa HTTP/1.1" 404 152 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:37:48 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:37:48 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:37:48 info: ::1 - - [Wed, 26 Jul 2023 07:37:48 GMT] "GET /users/1/todos HTTP/1.1" 200 445 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:37:58 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:37:58 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:37:58 info: ::1 - - [Wed, 26 Jul 2023 07:37:58 GMT] "GET /users/2/todos HTTP/1.1" 200 445 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:38:36 info: =================================
+2023-07-26 16:38:36 info: ======= ENV: development =======
+2023-07-26 16:38:36 info: 🚀 App listening on the port 3000
+2023-07-26 16:38:36 info: =================================
+2023-07-26 16:38:36 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:38:36 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:38:36 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:38:36 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:38:36 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:39:06 info: =================================
+2023-07-26 16:39:06 info: ======= ENV: development =======
+2023-07-26 16:39:06 info: 🚀 App listening on the port 3000
+2023-07-26 16:39:06 info: =================================
+2023-07-26 16:39:06 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:39:06 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:39:06 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:39:06 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:39:06 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:39:10 info: =================================
+2023-07-26 16:39:10 info: ======= ENV: development =======
+2023-07-26 16:39:10 info: 🚀 App listening on the port 3000
+2023-07-26 16:39:10 info: =================================
+2023-07-26 16:39:10 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:39:10 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:39:10 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:39:10 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:39:10 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:39:30 info: =================================
+2023-07-26 16:39:30 info: ======= ENV: development =======
+2023-07-26 16:39:30 info: 🚀 App listening on the port 3000
+2023-07-26 16:39:30 info: =================================
+2023-07-26 16:39:30 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:39:30 info: 2ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:39:30 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:39:30 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:39:30 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:39:55 info: =================================
+2023-07-26 16:39:55 info: ======= ENV: development =======
+2023-07-26 16:39:55 info: 🚀 App listening on the port 3000
+2023-07-26 16:39:55 info: =================================
+2023-07-26 16:39:55 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:39:55 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:39:55 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:39:55 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:39:55 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:40:05 info: =================================
+2023-07-26 16:40:05 info: ======= ENV: development =======
+2023-07-26 16:40:05 info: 🚀 App listening on the port 3000
+2023-07-26 16:40:05 info: =================================
+2023-07-26 16:40:05 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:40:05 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:40:05 info: 0ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:40:05 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:40:05 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:40:13 info: =================================
+2023-07-26 16:40:13 info: ======= ENV: development =======
+2023-07-26 16:40:13 info: 🚀 App listening on the port 3000
+2023-07-26 16:40:13 info: =================================
+2023-07-26 16:40:13 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:40:13 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:40:13 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:40:13 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:40:13 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:40:15 info: ::1 - - [Wed, 26 Jul 2023 07:40:15 GMT] "GET /users/2/todos HTTP/1.1" 404 152 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:40:16 info: ::1 - - [Wed, 26 Jul 2023 07:40:16 GMT] "GET /users/2/todos HTTP/1.1" 404 152 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:40:21 info: ::1 - - [Wed, 26 Jul 2023 07:40:21 GMT] "GET /users/1/todos HTTP/1.1" 404 152 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:40:59 info: =================================
+2023-07-26 16:40:59 info: ======= ENV: development =======
+2023-07-26 16:40:59 info: 🚀 App listening on the port 3000
+2023-07-26 16:40:59 info: =================================
+2023-07-26 16:40:59 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:40:59 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:40:59 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:40:59 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:40:59 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:41:00 info: =================================
+2023-07-26 16:41:00 info: ======= ENV: development =======
+2023-07-26 16:41:00 info: 🚀 App listening on the port 3000
+2023-07-26 16:41:00 info: =================================
+2023-07-26 16:41:00 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:41:00 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:41:00 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:41:00 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:41:00 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:41:05 info: 3ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:41:05 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:41:05 info: ::1 - - [Wed, 26 Jul 2023 07:41:05 GMT] "GET /users/1/todos HTTP/1.1" 200 445 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:41:11 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:41:11 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel`;
+2023-07-26 16:41:11 info: ::1 - - [Wed, 26 Jul 2023 07:41:11 GMT] "GET /users/2/todos HTTP/1.1" 200 445 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:41:37 info: =================================
+2023-07-26 16:41:37 info: ======= ENV: development =======
+2023-07-26 16:41:37 info: 🚀 App listening on the port 3000
+2023-07-26 16:41:37 info: =================================
+2023-07-26 16:41:37 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:41:37 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:41:37 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:41:37 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:41:37 info: 2ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:41:39 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:41:39 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 2;
+2023-07-26 16:41:39 info: ::1 - - [Wed, 26 Jul 2023 07:41:39 GMT] "GET /users/2/todos HTTP/1.1" 200 296 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:41:43 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:41:43 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 1;
+2023-07-26 16:41:43 info: ::1 - - [Wed, 26 Jul 2023 07:41:43 GMT] "GET /users/1/todos HTTP/1.1" 200 179 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:41:48 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:41:48 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 3;
+2023-07-26 16:41:48 info: ::1 - - [Wed, 26 Jul 2023 07:41:48 GMT] "GET /users/3/todos HTTP/1.1" 200 31 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:41:54 info: 2ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:41:54 info: 2ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 2;
+2023-07-26 16:41:54 info: ::1 - - [Wed, 26 Jul 2023 07:41:54 GMT] "GET /users/2/todos HTTP/1.1" 200 296 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:45:12 info: =================================
+2023-07-26 16:45:12 info: ======= ENV: development =======
+2023-07-26 16:45:12 info: 🚀 App listening on the port 3000
+2023-07-26 16:45:12 info: =================================
+2023-07-26 16:45:12 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:45:12 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:45:12 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:45:12 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:45:12 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:46:50 error: [POST] /users/1/todos >> StatusCode:: 400, Message:: Unexpected token } in JSON at position 54
+2023-07-26 16:46:50 info: ::1 - - [Wed, 26 Jul 2023 07:46:50 GMT] "POST /users/1/todos HTTP/1.1" 400 55 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:46:55 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:46:55 error: [POST] /users/1/todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.userId cannot be null
+2023-07-26 16:46:55 info: ::1 - - [Wed, 26 Jul 2023 07:46:55 GMT] "POST /users/1/todos HTTP/1.1" 500 64 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:47:00 info: 2ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:47:00 info: 4ms Executed (default): INSERT INTO `todos` (`id`,`title`,`content`,`user_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?); "아 약속잡기", "그것 참 힘드네", 1, "2023-07-26 16:47:00.186", "2023-07-26 16:47:00.186"
+2023-07-26 16:47:00 info: ::1 - - [Wed, 26 Jul 2023 07:47:00 GMT] "POST /users/1/todos HTTP/1.1" 200 181 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:47:14 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:47:14 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 1;
+2023-07-26 16:47:14 info: ::1 - - [Wed, 26 Jul 2023 07:47:14 GMT] "GET /users/1/todos HTTP/1.1" 200 337 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:48:58 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:48:58 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 2;
+2023-07-26 16:48:58 info: ::1 - - [Wed, 26 Jul 2023 07:48:58 GMT] "GET /users/2/todos HTTP/1.1" 200 296 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:50:44 info: =================================
+2023-07-26 16:50:44 info: ======= ENV: development =======
+2023-07-26 16:50:44 info: 🚀 App listening on the port 3000
+2023-07-26 16:50:44 info: =================================
+2023-07-26 16:50:44 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:50:44 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:50:44 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:50:44 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:50:44 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:51:13 info: =================================
+2023-07-26 16:51:13 info: ======= ENV: development =======
+2023-07-26 16:51:13 info: 🚀 App listening on the port 3000
+2023-07-26 16:51:13 info: =================================
+2023-07-26 16:51:13 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:51:13 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:51:13 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:51:13 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:51:13 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:51:21 info: =================================
+2023-07-26 16:51:21 info: ======= ENV: development =======
+2023-07-26 16:51:21 info: 🚀 App listening on the port 3000
+2023-07-26 16:51:21 info: =================================
+2023-07-26 16:51:21 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:51:21 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:51:21 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:51:21 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:51:21 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:57:18 info: =================================
+2023-07-26 16:57:18 info: ======= ENV: development =======
+2023-07-26 16:57:18 info: 🚀 App listening on the port 3000
+2023-07-26 16:57:18 info: =================================
+2023-07-26 16:57:18 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:57:18 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:57:18 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:57:18 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:57:18 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:57:57 info: =================================
+2023-07-26 16:57:57 info: ======= ENV: development =======
+2023-07-26 16:57:57 info: 🚀 App listening on the port 3000
+2023-07-26 16:57:57 info: =================================
+2023-07-26 16:57:57 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:57:57 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:57:57 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:57:57 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:57:57 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 16:59:12 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:59:12 error: [POST] /users/2/todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 16:59:12 info: ::1 - - [Wed, 26 Jul 2023 07:59:12 GMT] "POST /users/2/todos HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:59:26 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:59:26 error: [POST] /users/2/todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 16:59:26 info: ::1 - - [Wed, 26 Jul 2023 07:59:26 GMT] "POST /users/2/todos HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:59:41 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 16:59:41 error: [POST] /users/2/todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 16:59:41 info: ::1 - - [Wed, 26 Jul 2023 07:59:41 GMT] "POST /users/2/todos HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 16:59:58 info: =================================
+2023-07-26 16:59:58 info: ======= ENV: development =======
+2023-07-26 16:59:58 info: 🚀 App listening on the port 3000
+2023-07-26 16:59:58 info: =================================
+2023-07-26 16:59:58 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 16:59:58 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:59:58 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 16:59:58 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 16:59:58 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 17:00:07 info: =================================
+2023-07-26 17:00:07 info: ======= ENV: development =======
+2023-07-26 17:00:07 info: 🚀 App listening on the port 3000
+2023-07-26 17:00:07 info: =================================
+2023-07-26 17:00:07 info: 2ms Executed (default): SELECT 1+1 AS result
+2023-07-26 17:00:07 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 17:00:07 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 17:00:07 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 17:00:07 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 17:00:16 info: =================================
+2023-07-26 17:00:16 info: ======= ENV: development =======
+2023-07-26 17:00:16 info: 🚀 App listening on the port 3000
+2023-07-26 17:00:16 info: =================================
+2023-07-26 17:00:16 info: 1ms Executed (default): SELECT 1+1 AS result
+2023-07-26 17:00:16 info: 2ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 17:00:16 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 17:00:16 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 17:00:16 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 17:00:23 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 17:00:23 info: 1ms Executed (default): INSERT INTO `todos` (`id`,`title`,`content`,`user_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?); "아", "그것 참 난 병신이구만", 1, "2023-07-26 17:00:23.651", "2023-07-26 17:00:23.651"
+2023-07-26 17:00:23 info: ::1 - - [Wed, 26 Jul 2023 08:00:23 GMT] "POST /users/2/todos HTTP/1.1" 200 178 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:00:41 info: 2ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 17:00:41 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 2;
+2023-07-26 17:00:41 info: ::1 - - [Wed, 26 Jul 2023 08:00:41 GMT] "GET /users/2/todos HTTP/1.1" 200 296 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:00:48 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 17:00:48 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 1;
+2023-07-26 17:00:48 info: ::1 - - [Wed, 26 Jul 2023 08:00:48 GMT] "GET /users/1/todos HTTP/1.1" 200 492 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:05:29 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 17:05:29 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 2;
+2023-07-26 17:05:29 info: ::1 - - [Wed, 26 Jul 2023 08:05:29 GMT] "GET /users/2/todos HTTP/1.1" 200 296 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:08:48 info: =================================
+2023-07-26 17:08:48 info: ======= ENV: development =======
+2023-07-26 17:08:48 info: 🚀 App listening on the port 3000
+2023-07-26 17:08:48 info: =================================
+2023-07-26 17:08:48 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 17:08:48 info: 3ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 17:08:48 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 17:08:48 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 17:08:48 info: 0ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 17:09:16 info: =================================
+2023-07-26 17:09:16 info: ======= ENV: development =======
+2023-07-26 17:09:16 info: 🚀 App listening on the port 3000
+2023-07-26 17:09:16 info: =================================
+2023-07-26 17:09:16 info: 0ms Executed (default): SELECT 1+1 AS result
+2023-07-26 17:09:16 info: 0ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 17:09:16 info: 1ms Executed (default): SHOW INDEX FROM `users`
+2023-07-26 17:09:16 info: 1ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'todos' AND TABLE_SCHEMA = 'todolist'
+2023-07-26 17:09:16 info: 1ms Executed (default): SHOW INDEX FROM `todos`
+2023-07-26 17:15:52 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 17:15:52 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 2;
+2023-07-26 17:15:52 info: ::1 - - [Wed, 26 Jul 2023 08:15:52 GMT] "GET /users/2/todos HTTP/1.1" 200 296 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:15:56 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 17:15:56 info: 2ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 1;
+2023-07-26 17:15:56 info: ::1 - - [Wed, 26 Jul 2023 08:15:56 GMT] "GET /users/1/todos HTTP/1.1" 200 492 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:16:09 info: ::1 - - [Wed, 26 Jul 2023 08:16:09 GMT] "GET /users/1/todos/4 HTTP/1.1" 404 154 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:16:12 info: ::1 - - [Wed, 26 Jul 2023 08:16:12 GMT] "GET /users/1/todos/5 HTTP/1.1" 404 154 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:16:15 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 17:16:15 info: 0ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 1;
+2023-07-26 17:16:15 info: ::1 - - [Wed, 26 Jul 2023 08:16:15 GMT] "GET /users/1/todos/ HTTP/1.1" 200 492 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:18:34 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 2;
+2023-07-26 17:18:34 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 3;
+2023-07-26 17:18:34 info: ::1 - - [Wed, 26 Jul 2023 08:18:34 GMT] "GET /users/3/todos/ HTTP/1.1" 200 31 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:30:03 error: [GET] /users/2/todos/ >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 17:30:03 info: ::1 - - [Wed, 26 Jul 2023 08:30:03 GMT] "GET /users/2/todos/ HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:30:07 error: [GET] /users/1/todos/ >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 17:30:07 info: ::1 - - [Wed, 26 Jul 2023 08:30:07 GMT] "GET /users/1/todos/ HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:30:10 error: [GET] /users/1/todos >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 17:30:10 info: ::1 - - [Wed, 26 Jul 2023 08:30:10 GMT] "GET /users/1/todos HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:30:14 error: [GET] /users/2/todos >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-26 17:30:14 info: ::1 - - [Wed, 26 Jul 2023 08:30:14 GMT] "GET /users/2/todos HTTP/1.1" 404 42 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:31:32 info: ::1 - - [Wed, 26 Jul 2023 08:31:32 GMT] "GET /login HTTP/1.1" 404 144 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:31:40 info: 0ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`email` = 'gh3136@gmail.com' LIMIT 1;
+2023-07-26 17:31:40 info: ::1 - - [Wed, 26 Jul 2023 08:31:40 GMT] "POST /login HTTP/1.1" 200 214 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:32:04 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 17:32:04 error: [POST] /users/1/todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-26 17:32:04 info: ::1 - - [Wed, 26 Jul 2023 08:32:04 GMT] "POST /users/1/todos HTTP/1.1" 500 170 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:32:09 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 17:32:09 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 1;
+2023-07-26 17:32:09 info: ::1 - - [Wed, 26 Jul 2023 08:32:09 GMT] "GET /users/1/todos HTTP/1.1" 200 492 "-" "PostmanRuntime/7.32.3"
+2023-07-26 17:32:15 info: 1ms Executed (default): SELECT `id`, `email`, `password`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `UserModel` WHERE `UserModel`.`id` = 1;
+2023-07-26 17:32:15 info: 1ms Executed (default): SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 2;
+2023-07-26 17:32:15 info: ::1 - - [Wed, 26 Jul 2023 08:32:15 GMT] "GET /users/2/todos HTTP/1.1" 200 296 "-" "PostmanRuntime/7.32.3"

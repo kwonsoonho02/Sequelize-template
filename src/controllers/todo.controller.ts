@@ -7,7 +7,9 @@ export class TodoListController {
 
     public getTodo = async (req : Request, res : Response, next : NextFunction) => {
         try{
-            const findAllTodoListData = await this.todo.findAllTodoList();
+            const userId = Number(req.params.id);
+            console.log(userId)
+            const findAllTodoListData = await this.todo.findAllTodoList(userId);
             res.status(200).json({ data : findAllTodoListData, message : "findAll"})
         }catch (error) {
             next(error)
@@ -17,6 +19,7 @@ export class TodoListController {
     public createTodo = async (req : Request, res : Response, next : NextFunction) => {
         try{
             const todoData = req.body;
+            const userId = Number(req.params.id);
             const createTodoData = await this.todo.createTodo(todoData);
 
             res.status(200).json({data : createTodoData, msg : "create"});

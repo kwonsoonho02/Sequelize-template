@@ -1,7 +1,7 @@
 import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
 import { Todo } from '@/interfaces/todo.interface';
-import { type } from 'os';
-import UserModel from '@models/users.model';
+import { UserModel } from '@models/users.model';
+
 export type TodoCreationAttributes = Optional<Todo, 'id' | 'title' | 'content' | 'userId'>
 
 export class TodoModel extends Model<Todo, TodoCreationAttributes>{
@@ -19,6 +19,7 @@ export default function (sequelize: Sequelize): typeof TodoModel {
         {
             id: {
                 type: DataTypes.INTEGER,
+                autoIncrement: true,
                 allowNull: false,
                 primaryKey: true,
             },
@@ -43,7 +44,7 @@ export default function (sequelize: Sequelize): typeof TodoModel {
             tableName: 'todos',
             sequelize,
         },
+        
     );
-
     return TodoModel;
 }

@@ -31,11 +31,17 @@ sequelize.authenticate();
 const Users = UserModel(sequelize);
 const TodoLists = TodoModel(sequelize);
 
-Users.hasMany(TodoLists, {foreignKey : 'userId'})
+// 관계 설정
+Users.hasMany(TodoLists, {
+  foreignKey: 'userId',
+  sourceKey: 'id',
+  onDelete: 'CASCADE',
+});
 
+// 이후 DB 객체에 등록하여 내보냅니다.
 export const DB = {
   Users,
   TodoLists,
-  sequelize, // connection instance (RAW queries)
-  Sequelize, // library
+  sequelize,
+  Sequelize,
 };

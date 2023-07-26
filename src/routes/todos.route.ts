@@ -6,7 +6,8 @@ import { ValidationMiddleware } from '@middlewares/validation.middleware';
 import { AuthMiddleware } from '@/middlewares/auth.middleware';
 
 export class TodoRoute implements Routes {
-  public path = '/todos';
+  public path = '/users';
+  public path2 = '/todos'
   public router = Router();
   public todo = new TodoListController();
 
@@ -15,9 +16,9 @@ export class TodoRoute implements Routes {
   }
 
   private initializeRoutes() {
-    this.router.get(`${this.path}`, AuthMiddleware, this.todo.getTodo);
-    this.router.post(`${this.path}`, AuthMiddleware, this.todo.createTodo);
-    this.router.put(`${this.path}/:id`, AuthMiddleware, this.todo.updateTodo);
-    this.router.delete(`${this.path}/:id`, AuthMiddleware, this.todo.deleteTodo);
+    this.router.get(`${this.path}/:id${this.path2}`, AuthMiddleware, this.todo.getTodo);
+    this.router.post(`${this.path}/:id${this.path2}`, AuthMiddleware, this.todo.createTodo);
+    this.router.put(`${this.path}/:id${this.path2}`, AuthMiddleware, this.todo.updateTodo);
+    this.router.delete(`${this.path}/:id${this.path2}`, AuthMiddleware, this.todo.deleteTodo);
   }
 }
