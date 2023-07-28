@@ -1,5 +1,6 @@
-import { Request } from 'express';
-import { User } from '@interfaces/users.interface';
+import { Request } from "express";
+import { User } from "@interfaces/users.interface";
+import { Todo } from "./todo.interface";
 
 export interface DataStoredInToken {
   id: number;

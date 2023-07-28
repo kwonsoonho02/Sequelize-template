@@ -59,9 +59,14 @@
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.20.0",
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.1",
     "jest": "^28.1.1",
     "lint-staged": "^13.0.3",
@@ -69,7 +74,7 @@
     "node-gyp": "^9.1.0",
     "nodemon": "^2.0.19",
     "pm2": "^5.2.0",
-    "prettier": "^2.7.1",
+    "prettier": "2.8.8",
     "sequelize-cli": "^6.4.1",
     "supertest": "^6.2.4",
     "ts-jest": "^28.0.7",
@@ -77,5 +82,17 @@
     "tsc-alias": "^1.7.0",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "object-curly-newline": 0
+    },
+    "env": {
+      "browser": true
+    }
   }
 }

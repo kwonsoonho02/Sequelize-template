@@ -24,6 +24,16 @@
             "date": 1690345497607,
             "name": "/Users/able/Documents/GitHub/Sequelize template/src/logs/error/2023-07-26.log",
             "hash": "99b86eba399ec123024205ee718e6ba5976969af736b3bd15b806e17b620239b"
+        },
+        {
+            "date": 1690415741991,
+            "name": "/Users/able/Documents/GitHub/Sequelize template/src/logs/error/2023-07-27.log",
+            "hash": "a9858291e70e5e363cabe67bfb2dd7a109555b664921c7a39bb98fa687e6ed5d"
+        },
+        {
+            "date": 1690507100014,
+            "name": "/Users/able/Documents/GitHub/Sequelize template/src/logs/error/2023-07-28.log",
+            "hash": "690a45157a9219a0ac0d1195fbe4c2f9f39916984700c185d15a572fd69169de"
         }
     ],
     "hashType": "sha256"

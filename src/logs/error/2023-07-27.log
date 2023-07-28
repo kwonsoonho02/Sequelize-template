@@ -1,0 +1,65 @@
+2023-07-27 08:55:41 error: [GET] /users/3 >> StatusCode:: 409, Message:: User doesn't exist
+2023-07-27 09:02:39 error: [POST] /users >> StatusCode:: 409, Message:: This email gh3136@gmail.com already exists
+2023-07-27 09:24:02 error: [PUT] /todos >> StatusCode:: 400, Message:: Unexpected token } in JSON at position 92
+2023-07-27 09:25:14 error: [POST] /todos/2 >> StatusCode:: 400, Message:: Unexpected token 
+ in JSON at position 46
+2023-07-27 09:25:17 error: [POST] /todos/2 >> StatusCode:: 400, Message:: Unexpected token 
+ in JSON at position 46
+2023-07-27 09:25:24 error: [POST] /todos/1 >> StatusCode:: 400, Message:: Unexpected token 
+ in JSON at position 46
+2023-07-27 09:35:56 error: [GET] /todos >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-27 09:37:27 error: [GET] /todos >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-27 09:37:53 error: [GET] /todos >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-27 09:37:53 error: [GET] /todos >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-27 09:37:54 error: [GET] /todos >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-27 09:38:56 error: [GET] /todos >> StatusCode:: 500, Message:: WHERE parameter "user_id" has invalid "undefined" value
+2023-07-27 09:58:34 error: [GET] /todos >> StatusCode:: 500, Message:: WHERE parameter "id" has invalid "undefined" value
+2023-07-27 09:59:14 error: [GET] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 10:03:10 error: [GET] /todos >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-27 10:03:17 error: [GET] /todos >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-27 10:03:18 error: [GET] /todos >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-27 10:04:59 error: [POST] /login >> StatusCode:: 400, Message:: email must be an email
+2023-07-27 10:40:50 error: [DELETE] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "id" has invalid "undefined" value
+2023-07-27 10:59:59 error: [DELETE] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "id" has invalid "undefined" value
+2023-07-27 11:00:14 error: [DELETE] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "id" has invalid "undefined" value
+2023-07-27 11:00:22 error: [DELETE] /todos/1 >> StatusCode:: 500, Message:: WHERE parameter "id" has invalid "undefined" value
+2023-07-27 11:15:34 error: [GET] /todos >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-27 11:15:36 error: [GET] /todos >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-27 13:16:58 error: [POST] /logout >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-27 13:17:58 error: [POST] /signup >> StatusCode:: 400, Message:: email must be an email,password must be shorter than or equal to 32 characters,password must be longer than or equal to 9 characters,password should not be empty,password must be a string
+2023-07-27 13:19:07 error: [POST] /todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.title cannot be null,
+notNull Violation: TodoModel.content cannot be null,
+notNull Violation: TodoModel.userId cannot be null
+2023-07-27 13:20:13 error: [POST] /todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.userId cannot be null
+2023-07-27 13:26:18 error: [POST] /todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.userId cannot be null
+2023-07-27 13:26:20 error: [POST] /todos >> StatusCode:: 500, Message:: notNull Violation: TodoModel.userId cannot be null
+2023-07-27 13:31:39 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:34:08 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:34:09 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:54:20 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:54:21 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:57:51 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:57:52 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:57:53 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:58:26 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:58:27 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:58:27 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:58:37 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:58:38 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:59:09 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 13:59:09 error: [POST] /todos >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'id')
+2023-07-27 15:30:15 error: [DELETE] /todos/6 >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-27 15:31:46 error: [POST] /logout >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-27 15:48:00 error: [POST] /logout >> StatusCode:: 400, Message:: Unexpected end of JSON input
+2023-07-27 15:48:01 error: [POST] /logout >> StatusCode:: 400, Message:: Unexpected end of JSON input
+2023-07-27 15:48:01 error: [POST] /logout >> StatusCode:: 400, Message:: Unexpected end of JSON input
+2023-07-27 17:50:24 error: [PUT] /todos/6 >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-27 17:55:12 error: [PUT] /todos/6 >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-27 17:56:48 error: [GET] /todos >> StatusCode:: 500, Message:: (conn=1077, no: 1054, SQLState: 42S22) Unknown column 'user_model_id' in 'field list'
+sql: SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `user_model_id` AS `UserModelId` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 3; - parameters:[]
+2023-07-27 17:56:52 error: [GET] /todos >> StatusCode:: 500, Message:: (conn=1077, no: 1054, SQLState: 42S22) Unknown column 'user_model_id' in 'field list'
+sql: SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `user_model_id` AS `UserModelId` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 3; - parameters:[]
+2023-07-27 17:57:01 error: [GET] /todos >> StatusCode:: 500, Message:: (conn=1077, no: 1054, SQLState: 42S22) Unknown column 'user_model_id' in 'field list'
+sql: SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `user_model_id` AS `UserModelId` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 3; - parameters:[]
+2023-07-27 18:00:06 error: [GET] /todos >> StatusCode:: 500, Message:: (conn=1078, no: 1054, SQLState: 42S22) Unknown column 'user_model_id' in 'field list'
+sql: SELECT `id`, `title`, `content`, `user_id` AS `userId`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `user_model_id` AS `UserModelId` FROM `todos` AS `TodoModel` WHERE `TodoModel`.`user_id` = 3; - parameters:[]
